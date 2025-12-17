@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Committees</title>
+
+    <link rel="stylesheet" crossorigin href="/edpe/assets/page-committees-BTvSIUWt.css">
+    <link rel="stylesheet" crossorigin href="/edpe/assets/styles-Bs2rRueC.css">
+  </head>
+
+  <body>
+    <dialog class="reg-modal" id="register-modal" aria-labelledby="reg-title">
+  <div class="reg-modal__inner">
+    <button
+      class="reg-modal__close"
+      type="button"
+      data-close-register
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <h2 class="reg-modal__title" id="reg-title">Register for EDPE 2025</h2>
+    <p class="reg-modal__lead">
+      Please fill in your details to complete the registration.
+    </p>
+
+    <form class="reg-form" action="#" method="post">
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">First name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Last name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+      </div>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Email</span>
+        <input
+          class="reg-field__control"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+      </label>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Affiliation / Institution</span>
+        <input
+          class="reg-field__control"
+          type="text"
+          name="affiliation"
+          autocomplete="organization"
+        />
+      </label>
+
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">Country</span>
+          <select class="reg-field__control" name="country" required>
+            <option value="" selected disabled>Country</option>
+            <option>Slovakia</option>
+            <option>Czech Republic</option>
+            <option>Ukraine</option>
+            <option>Poland</option>
+            <option>Hungary</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Participant type</span>
+          <select class="reg-field__control" name="participantType" required>
+            <option>Student</option>
+            <option>Academic</option>
+            <option>Industry</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" required />
+        <span class="reg-check__text">
+          I agree with the
+          <a class="reg-link" href="#" target="_blank" rel="noreferrer"
+            >Terms &amp; Privacy policy</a
+          >
+          <span class="reg-req">*</span>
+        </span>
+      </label>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" />
+        <span class="reg-check__text"
+          >I would like to receive conference updates (optional)</span
+        >
+      </label>
+
+      <div class="reg-actions">
+        <button class="reg-actions__cancel" type="button" data-close-register>
+          Cancel
+        </button>
+        <button class="btn btn--primary reg-actions__submit" type="submit">
+          Complete registration
+        </button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="./index.html" aria-label="EDPE home">
+      <span class="brand__text">EDPE</span>
+    </a>
+
+    <span class="header__divider" aria-hidden="true"></span>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span class="sr-only">Open menu</span>
+      ☰
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <ul id="primary-nav" class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="./index.html">Home &amp; News</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-technical-tracks.html"
+            >Technical Tracks</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-organizers.html">Organizers</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-committees.html">Committees</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-program.html">Program</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </nav>
+
+    <span
+      class="header__divider header__divider--right"
+      aria-hidden="true"
+    ></span>
+
+    <!-- Register opens modal -->
+    <a
+      class="btn btn--primary header__cta"
+      href="#register"
+      role="button"
+      data-open-register
+      aria-haspopup="dialog"
+      aria-controls="register-modal"
+    >
+      Register
+    </a>
+  </div>
+</header>
+
+
+    <main>
+      <section class="committees" aria-labelledby="committees-title">
+  <div class="container container--home">
+    <h1 class="committees__title" id="committees-title">Committees</h1>
+
+    <div class="committees__stack">
+      <article class="committee-card committees__card">
+        <h2 class="committees__heading">CONFERENCE CHAIRMEN</h2>
+        <ul class="committees__list">
+          <li>
+            Karol Kyslan, Technical University of Košice, Slovakia – chairman
+          </li>
+          <li>Jadranko Matuško, University of Zagreb, Croatia – chairman</li>
+          <li>
+            Viliam Fedák, Technical University of Košice, Slovakia – honorary
+            chariman
+          </li>
+        </ul>
+      </article>
+
+      <article class="committee-card committees__card">
+        <h2 class="committees__heading">PROGRAM CHAIRMEN</h2>
+        <ul class="committees__list">
+          <li>Marek Pástor – Technical University of Košice, Slovakia</li>
+          <li>Željko Jakopović – University of Zagreb, Croatia</li>
+        </ul>
+      </article>
+
+      <article class="committee-card committees__card">
+        <h2 class="committees__heading">TECHNICAL PROGRAM COMMITTEE</h2>
+        <ul class="committees__list">
+          <li>
+            Gheorghe-Daniel Andreescu – Politehnica University of Timisoara,
+            Romania
+          </li>
+          <li>
+            Goce Arsov – Ss Cyril and Methodius University, Skopje, North
+            Macedonia
+          </li>
+          <li>Drago Ban – University of Zagreb, Croatia</li>
+          <li>
+            Jan Bauer – Czech Technical University, Prague, Czech Republic
+          </li>
+          <li>Pavol Bauer – Delft University of Technology, The Netherlands</li>
+          <li>Stefan Brock – Poznan University of Technology, Poland</li>
+          <li>Mihai Cernat – Transilvania University of Brașov, Romania</li>
+          <li>
+            Josef Cernohorsky – Technical University of Liberec, Czech Republic
+          </li>
+          <li>
+            Zdenek Cerovsky – Czech Technical University, Prague, Czech Republic
+          </li>
+          <li>
+            Goga Cvetkovski – Ss Cyril and Methodius University, Skopje, North
+            Macedonia
+          </li>
+          <li>Branislav Dobrucky – University of Zilina, Slovakia</li>
+          <li>
+            Tomislav Dragicevic – Technical University of Denmark, Denmark
+          </li>
+          <li>Peter Drgona – University of Zilina, Slovakia</li>
+          <li>Jaroslav Dudrik – Technical University of Kosice, Slovakia</li>
+          <li>Frantisek Durovsky – Technical University of Kosice, Slovakia</li>
+          <li>Mateusz Dybkowski – Wroclaw University of Technology, Poland</li>
+          <li>Zelmira Ferkova – Technical University of Košice, Slovakia</li>
+          <li>Dénes Fodor – University od Panonia, Gyor, Hungary</li>
+          <li>Michal Frivaldsky – University of Zilina, Slovakia</li>
+          <li>
+            Levon Gevorkov – Catalonia Institute for Energy Research (IREC),
+            Spain
+          </li>
+          <li>Peter Girovsky – Technical University of Košice, Slovakia</li>
+          <li>Ioan Mircea Gordan – University of Oradea, Romania</li>
+          <li>Milan Guzan – Technical University of Košice, Slovakia</li>
+          <li>Zdenek Hadas – Brno University of Technology, Czech Republic</li>
+          <li>
+            Sandor Halasz – Budapest Univ. of Technology and Economics, Hungary
+          </li>
+          <li>
+            Mikuláš Huba – Slovak Technical University, Bratislava, Slovakia
+          </li>
+          <li>Jaeho Choi – Chungbuk National University, Republic of Korea</li>
+          <li>Sandor Iles – University of Zagreb, Croatia</li>
+          <li>Zeljko Jakopovic – University of Zagreb, Croatia</li>
+          <li>Stepan Janous – University of West Bohemia, Czech Republic</li>
+          <li>
+            Zbigniew Kaczmarczyk – Silesian Univ. of Technology, Gliwice, Poland
+          </li>
+          <li>Vladimir Katic – University of Novi Sad, Serbia</li>
+          <li>Seiichiro Katsura – Keio University, Japan</li>
+          <li>
+            Marian P. Kazmierkowski – Warsaw University of Technology, Poland
+          </li>
+          <li>
+            Teresa Orlowska-Kowalska – Wroclaw University of Technology, Poland
+          </li>
+          <li>Vladimir Kindl – University of West Bohemia, Czech Republic</li>
+          <li>
+            Peter Korondi – Budapest Univ. of Technology and Economics, Hungary
+          </li>
+          <li>Zdnko Kovacic – University of Zagreb, Croatia</li>
+          <li>Vaclav Kus – University of West Bohemia, Czech Republic</li>
+          <li>Martina Kutija – University of Zagreb, Croatia</li>
+          <li>Milan Lacko – Technical University of Košice, Slovakia</li>
+          <li>Dan Lascu – Polytechnic University of Timisoara, Romania</li>
+          <li>Jiri Lettl – Czech Technical University in Prague</li>
+          <li>
+            Dusan Maga – Czech Technical University, Prague, Czech Republic
+          </li>
+          <li>Pavol Makys – University of Zilina, Slovakia</li>
+          <li>Jan Michalik – University of West Bohemia, Czech Republic</li>
+          <li>Miro Milanovic – University of Maribor, Slovenia</li>
+          <li>Babak Nahid-Mobarakesh – McMaster University, Canada</li>
+          <li>
+            Miroslav Novak – Technical University of Liberec, Czech Republic
+          </li>
+          <li>
+            Peter Palacky – VSB – Technical University of Ostrava, Czech
+            Republic
+          </li>
+          <li>Denis Pelin – University of Osijek, Croatia</li>
+          <li>Daniela Perdukova – Technical University of Kosice, Slovakia</li>
+          <li>Nedjeljko Peric – University of Zagreb, Croatia</li>
+          <li>Zdenek Peroutka – University of West Bohemia, Czech Republic</li>
+          <li>Ivan Petrovic – University of Zagreb, Croatia</li>
+          <li>Luka Pravica – University of Zagreb, Croatia</li>
+          <li>Pavol Rafajdus – University of Zilina, Slovakia</li>
+          <li>
+            Ales Richter – Technical University of Liberec, Czech Republic
+          </li>
+          <li>Helga Silaghi – University of Oradea, Romania</li>
+          <li>Alexandru Marius Silaghi – University of Oradea, Romania</li>
+          <li>Vladislav Singule – Brno Univ. of Technology, Czech Republic</li>
+          <li>Bohumil Skala – University of West Bohemia, Czech Republic</li>
+          <li>Mariusz Stepien – Silesian University of Technology, Poland</li>
+          <li>Stjepan Stipetic – University of Zagreb, Croatia</li>
+          <li>Viktor Sunde – University of Zagreb, Croatia</li>
+          <li>Krzysztof Szabat – Wroclaw University of Technology, Poland</li>
+          <li>Lorand Szabo – University of Cluj, Romania</li>
+          <li>Pavol Spanik – University of Zilina, Slovakia</li>
+          <li>Grzegorz Tarchala – Wroclaw University of Technology, Poland</li>
+          <li>Bozo Terzic – University of Split, Croatia</li>
+          <li>Daniel Nistor Trip – University of Oradea, Romania</li>
+          <li>Mitja Truntic – University of Maribor, Slovenia</li>
+          <li>
+            Viktor Valouch – Czech Technical Univ., Prague, Czech Republic
+          </li>
+          <li>Mario Vasak – University of Zagreb, Croatia</li>
+          <li>Prasanth Venugopal – University of Twente, Netherlands</li>
+          <li>Dmitri Vinnikov – Tallin University of Technology, Estonia</li>
+          <li>Ondrej Vitek – Brno University of Technology, Czech Republic</li>
+          <li>Dinko Vukadinovic – University of Split, Croatia</li>
+          <li>Helmut Weiss – University of Leoben, Austria</li>
+          <li>Damir Zarko – University of Zagreb, Croatia</li>
+          <li>Pavel Zaskalicky – Technical University of Košice, Slovakia</li>
+          <li>Krzysztof Zawirski – Poznan University of Technology, Poland</li>
+          <li>
+            Genadij Stepanovic Zinoviev – Novosibirsk State Techn. Univ., Russia
+          </li>
+        </ul>
+      </article>
+
+      <article class="committee-card committees__card">
+        <h2 class="committees__heading">LOCAL ORGANIZING COMMITTEE</h2>
+        <ul class="committees__list">
+          <li>Viliam Fedák – Conference Guru</li>
+          <li>Karol Kyslan – Proceedings, IEEE Xplore, Webpage</li>
+          <li>Marek Pástor – Venue &amp; accommodation, Proceedings</li>
+          <li>Viktor Šlapák – Registration desk, Social programme</li>
+          <li>Milan Guzan – Finance Chairman</li>
+          <li>Matěj Pácha – Chair of IEEE Czechoslovakia Section</li>
+          <li>Milan Lacko – Databases</li>
+          <li>Lukas Pancurak – Assistant</li>
+          <li>Daniel Marcin – Assistant</li>
+          <li>David Bodnar – Assistant</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+  <div class="container container--home">
+    <div class="site-footer__grid">
+      <!-- Left: brand + socials -->
+      <div class="site-footer__left">
+        <div class="site-footer__brand">EDPE</div>
+
+        <nav class="site-footer__social" aria-label="Social links">
+          <a class="site-footer__icon" href="#" aria-label="Facebook">
+            <img src="../img/facebook.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="LinkedIn">
+            <img src="../img/linkedin.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="YouTube">
+            <img src="../img/youtube.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="Instagram">
+            <img src="../img/instagram.svg" alt="" loading="lazy" />
+          </a>
+        </nav>
+      </div>
+
+      <!-- Center: Gallery title -->
+      <div class="site-footer__center">
+        <h2 class="site-footer__title" id="footer-gallery-title">Gallery</h2>
+      </div>
+
+      <div class="site-footer__right" aria-labelledby="footer-gallery-title">
+        <div class="site-footer__thumbs">
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 1"
+          >
+            <img
+              src="../img/footer-gallery/gallery-1.png"
+              alt="Gallery photo 1"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 2"
+          >
+            <img
+              src="../img/footer-gallery/gallery-2.png"
+              alt="Gallery photo 2"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 3"
+          >
+            <img
+              src="../img/footer-gallery/gallery-3.png"
+              alt="Gallery photo 3"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 4"
+          >
+            <img
+              src="../img/footer-gallery/gallery-4.png"
+              alt="Gallery photo 4"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 5"
+          >
+            <img
+              src="../img/footer-gallery/gallery-5.png"
+              alt="Gallery photo 5"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 6"
+          >
+            <img
+              src="../img/footer-gallery/gallery-6.png"
+              alt="Gallery photo 6"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

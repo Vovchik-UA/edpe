@@ -6,120 +6,583 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/edpe/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/edpe/assets/styles-DvPDDfy5.css">
+    <link rel="modulepreload" crossorigin href="/edpe/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/edpe/assets/index-CeQOm1AT.css">
+    <link rel="stylesheet" crossorigin href="/edpe/assets/styles-Bs2rRueC.css">
+    <link rel="stylesheet" crossorigin href="/edpe/assets/organizers-DEVWlpqO.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/edpe/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="./index.html" aria-label="EDPE home">
+      <span class="brand__text">EDPE</span>
+    </a>
+
+    <span class="header__divider" aria-hidden="true"></span>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span class="sr-only">Open menu</span>
+      ☰
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <ul id="primary-nav" class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="./index.html">Home &amp; News</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-technical-tracks.html"
+            >Technical Tracks</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-organizers.html">Organizers</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-committees.html">Committees</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-program.html">Program</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-gallery.html">Gallery</a>
         </li>
       </ul>
     </nav>
+
+    <span
+      class="header__divider header__divider--right"
+      aria-hidden="true"
+    ></span>
+
+    <!-- Register opens modal -->
+    <a
+      class="btn btn--primary header__cta"
+      href="#register"
+      role="button"
+      data-open-register
+      aria-haspopup="dialog"
+      aria-controls="register-modal"
+    >
+      Register
+    </a>
   </div>
 </header>
+
+    <dialog class="reg-modal" id="register-modal" aria-labelledby="reg-title">
+  <div class="reg-modal__inner">
+    <button
+      class="reg-modal__close"
+      type="button"
+      data-close-register
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <h2 class="reg-modal__title" id="reg-title">Register for EDPE 2025</h2>
+    <p class="reg-modal__lead">
+      Please fill in your details to complete the registration.
+    </p>
+
+    <form class="reg-form" action="#" method="post">
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">First name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Last name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+      </div>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Email</span>
+        <input
+          class="reg-field__control"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+      </label>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Affiliation / Institution</span>
+        <input
+          class="reg-field__control"
+          type="text"
+          name="affiliation"
+          autocomplete="organization"
+        />
+      </label>
+
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">Country</span>
+          <select class="reg-field__control" name="country" required>
+            <option value="" selected disabled>Country</option>
+            <option>Slovakia</option>
+            <option>Czech Republic</option>
+            <option>Ukraine</option>
+            <option>Poland</option>
+            <option>Hungary</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Participant type</span>
+          <select class="reg-field__control" name="participantType" required>
+            <option>Student</option>
+            <option>Academic</option>
+            <option>Industry</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" required />
+        <span class="reg-check__text">
+          I agree with the
+          <a class="reg-link" href="#" target="_blank" rel="noreferrer"
+            >Terms &amp; Privacy policy</a
+          >
+          <span class="reg-req">*</span>
+        </span>
+      </label>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" />
+        <span class="reg-check__text"
+          >I would like to receive conference updates (optional)</span
+        >
+      </label>
+
+      <div class="reg-actions">
+        <button class="reg-actions__cancel" type="button" data-close-register>
+          Cancel
+        </button>
+        <button class="btn btn--primary reg-actions__submit" type="submit">
+          Complete registration
+        </button>
+      </div>
+    </form>
+  </div>
+</dialog>
 
 
     <main>
       <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/edpe/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+      <section class="home-timer" aria-label="Conference countdown">
+  <div class="container container--home">
+    <div class="home-timer__inner">
+      <h1 class="home-timer__title">
+        International Conference on Electrical<br />
+        Drives and Power Electronics
+      </h1>
+
+      <p class="home-timer__meta">
+        <span class="home-timer__pin" aria-hidden="true">
+          <!-- pin icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 22s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </span>
+
+        <span class="home-timer__metaText">
+          HOTEL ATRIUM, THE HIGH TATRAS, SLOVAKIA, 25–27 SEPTEMBER 2023
+        </span>
+      </p>
+
+      <!-- Countdown -->
+      <div class="countdown" data-deadline="2026-09-25T09:00:00+02:00">
+        <div class="countdown__card">
+          <div class="countdown__label">WEEKS</div>
+          <div class="countdown__num" id="cd-weeks">00</div>
+        </div>
+
+        <div class="countdown__card">
+          <div class="countdown__label">DAYS</div>
+          <div class="countdown__num" id="cd-days">00</div>
+        </div>
+
+        <div class="countdown__card">
+          <div class="countdown__label">HOURS</div>
+          <div class="countdown__num" id="cd-hours">00</div>
+        </div>
+
+        <div class="countdown__card">
+          <div class="countdown__label">MINUTES</div>
+          <div class="countdown__num" id="cd-minutes">00</div>
+        </div>
+
+        <div class="countdown__card">
+          <div class="countdown__label">SECONDS</div>
+          <div class="countdown__num" id="cd-seconds">00</div>
+        </div>
+      </div>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
   </div>
 </section>
 
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
+      <section class="home-news" aria-labelledby="news-title">
+  <div class="home-news__inner">
+    <header class="home-news__header">
+      <h2 id="news-title" class="home-news__title">News</h2>
+    </header>
+
+    <article class="home-news__card">
+      <p>
+        The final conference program has been published, see
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
+          href="https://www.edpe.sk/wp-content/uploads/2023/09/EDPE-2023_Final-Program.pdf"
+          class="home-news__link"
+          >EDPE 2023_Final Program</a
+        >. If you’re interested in going on a hiking trip, don’t forget to wear
+        footwear suitable for the mountains. Also, don’t forget your swimsuit
+        for Swimming pool afterparty in the hotel wellness.
+      </p>
+
+      <p>
+        The preliminary program has been
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
+          href="https://www.edpe.sk/wp-content/uploads/2023/09/Preliminary-program-4-September.pdf"
+          class="home-news__link"
+          >published</a
+        >. In case of any uncertainties, please contact us. The organisers
+        reserve a right to slightly alter or change the program or its content
+        without assigning any reason whatsoever. Please, keep track of changes.
+      </p>
+
+      <p>
+        Please, prepare your slides and posters in accordance to
         <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://www.edpe.sk/wp-content/uploads/2023/09/Lecture-and-Poster-Instuctions.pdf"
+          class="home-news__link"
+          >Lecture and Poster Instuctions</a
+        >.
+      </p>
+
+      <p>Late registration for the conference has expired.</p>
+
+      <p>
+        Author of accepted papers can found detailed information about Camera
+        Ready Papers, PDF eXpress check and IEEE Copright form in
+        <a href="https://www.edpe.sk/for-authors/" class="home-news__link"
+          >For Authors</a
         >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
+        section.
+      </p>
+
+      <p>
+        Booking of rooms in the conference venue Hotel Atrium is
+        <a href="https://booking.atriumhotel.sk/" class="home-news__link"
+          >open</a
+        >. Do not forget to use the promo code “EDPE2023” to get a special
+        discount for the EDPE 2023 conference participants (valid till 31 August
+        2023). We are looking forward to meeting you in The High Tatras!
+      </p>
+
+      <p>
+        Selected papers from EDPE 2023 conference will be offered for publishing
+        in journals Power Electronics and Drives (Sciendo) and Automatika –
+        Journal for Control, Measurement, Electronics, Computing and
+        Communications (Taylor &amp; Francis, IF = 1.9, Q3).
+      </p>
+
+      <p>
+        The submission site for uploading papers is open. You can find it
+        <a
+          href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FEDPE2023%2FSubmission%2FIndex"
+          class="home-news__link"
+          >at this link</a
+        >. Any other information are in
+        <a href="https://www.edpe.sk/for-authors/" class="home-news__link"
+          >For Authors</a
+        >
+        section.
+      </p>
+
+      <p>
+        We are very happy to announce a partnership between EDPE 2023 and
+        Infineon Technologies Austria AG together with the Important Project of
+        Common European Interest on Microelectronics (IPCEI) has been
+        established. Click
+        <a
+          href="https://www.infineon.com/promo/ipcei-on-me"
+          class="home-news__link"
+          >here</a
+        >
+        for more information.
+      </p>
+
+      <p>
+        Technical co-sponsorship of the EDPE 2023 conference is provided by IEEE
+        Czechoslovakia Section and Czechoslovakia Section IA/IE Joint Chapter.
+        The IEEE conference number is <strong>#58625</strong>.
+      </p>
+    </article>
   </div>
-</article>
+</section>
 
-    </main>
+      <section class="home-cfp" aria-labelledby="cfp-title">
+  <div class="home-cfp__inner">
+    <header class="home-cfp__header">
+      <h2 id="cfp-title" class="home-cfp__title">EDPE 2023 Call For Papers</h2>
+    </header>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
+    <article class="home-cfp__card">
+      <p>
+        The 36th International Conference on Electrical Drives and Power
+        Electronics EDPE 2023 will take place in The High Tatras, Slovakia on
+        25-27 September 2023. The conference is the 11th joint Slovak-Croatian
+        conference organized by the Technical University of Košice, Faculty of
+        Electrical Engineering and Informatics, Slovak Electrotechnical Society,
+        University of Zagreb and KoREMA – Croatian Society for Communication,
+        Electronics, Measurement and Control. The EDPE 2023 conference series
+        continues in the tradition of two former conferences established
+        independently in Slovakia and Croatia. The EDPE conference series brings
+        opportunities for engineers, specialists in industry and academia to
+        create a forum for sharing knowledge and exchange experiences on the
+        recent development, applications and future trends in all aspects of
+        power electronic systems, electrical machines, electrical drives and
+        their industrial applications. The conference will consist of invited
+        paper presentations, plenary sessions and poster presentations.
+      </p>
+
+      <p>
+        Call for Papers can be downloaded here:
+        <a
+          class="home-cfp__link"
+          href="https://www.edpe.sk/wp-content/uploads/2023/03/CFP-EDPE-2023.pdf"
+          >CFP</a
+        >.
+      </p>
+    </article>
+  </div>
+</section>
+
+      <section class="home-partners" aria-labelledby="partners-title">
+  <div class="container container--home">
+    <header class="home-partners__header">
+      <h2 id="partners-title" class="home-partners__title">
+        Conference Partners
+      </h2>
+    </header>
+
+    <div class="home-partners__grid-wrap">
+      <div class="home-partners__grid">
+        <a
+          class="home-partners__item"
+          href="https://www.infineon.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-1-DWmWsrge.png"
+            alt="Infineon"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="home-partners__item"
+          href="https://www.infineon.com/promo/ipcei-on-me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-2-UYu6ze2U.png"
+            alt="IPCEI on Microelectronics"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="home-partners__item"
+          href="https://ieee-pemc2024.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-3-OLDDhYOK.png"
+            alt="PEMC"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="home-partners__item"
+          href="https://www.semikron-danfoss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-4-DsZV-Kqu.png"
+            alt="SEMIKRON DANFOSS"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="home-cta" aria-labelledby="cta-title">
+  <div class="container container--home">
+    <div class="home-cta__inner">
+      <h2 id="cta-title" class="home-cta__title">Apply now!</h2>
+
       <a
-        class="footer-link"
-        href="https://goit.global/ua/"
+        class="home-cta__btn btn btn--primary btn--lg""
+        href="https://www.edpe.sk/registration/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        GoIT team
+        Register
       </a>
-    </p>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+  <div class="container container--home">
+    <div class="site-footer__grid">
+      <!-- Left: brand + socials -->
+      <div class="site-footer__left">
+        <div class="site-footer__brand">EDPE</div>
+
+        <nav class="site-footer__social" aria-label="Social links">
+          <a class="site-footer__icon" href="#" aria-label="Facebook">
+            <img src="../img/facebook.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="LinkedIn">
+            <img src="../img/linkedin.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="YouTube">
+            <img src="../img/youtube.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="Instagram">
+            <img src="../img/instagram.svg" alt="" loading="lazy" />
+          </a>
+        </nav>
+      </div>
+
+      <!-- Center: Gallery title -->
+      <div class="site-footer__center">
+        <h2 class="site-footer__title" id="footer-gallery-title">Gallery</h2>
+      </div>
+
+      <div class="site-footer__right" aria-labelledby="footer-gallery-title">
+        <div class="site-footer__thumbs">
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 1"
+          >
+            <img
+              src="../img/footer-gallery/gallery-1.png"
+              alt="Gallery photo 1"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 2"
+          >
+            <img
+              src="../img/footer-gallery/gallery-2.png"
+              alt="Gallery photo 2"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 3"
+          >
+            <img
+              src="../img/footer-gallery/gallery-3.png"
+              alt="Gallery photo 3"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 4"
+          >
+            <img
+              src="../img/footer-gallery/gallery-4.png"
+              alt="Gallery photo 4"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 5"
+          >
+            <img
+              src="../img/footer-gallery/gallery-5.png"
+              alt="Gallery photo 5"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 6"
+          >
+            <img
+              src="../img/footer-gallery/gallery-6.png"
+              alt="Gallery photo 6"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 

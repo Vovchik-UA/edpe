@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizers</title>
+
+    <link rel="stylesheet" crossorigin href="/edpe/assets/styles-Bs2rRueC.css">
+    <link rel="stylesheet" crossorigin href="/edpe/assets/organizers-DEVWlpqO.css">
+  </head>
+
+  <body>
+    <dialog class="reg-modal" id="register-modal" aria-labelledby="reg-title">
+  <div class="reg-modal__inner">
+    <button
+      class="reg-modal__close"
+      type="button"
+      data-close-register
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <h2 class="reg-modal__title" id="reg-title">Register for EDPE 2025</h2>
+    <p class="reg-modal__lead">
+      Please fill in your details to complete the registration.
+    </p>
+
+    <form class="reg-form" action="#" method="post">
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">First name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Last name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+      </div>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Email</span>
+        <input
+          class="reg-field__control"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+      </label>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Affiliation / Institution</span>
+        <input
+          class="reg-field__control"
+          type="text"
+          name="affiliation"
+          autocomplete="organization"
+        />
+      </label>
+
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">Country</span>
+          <select class="reg-field__control" name="country" required>
+            <option value="" selected disabled>Country</option>
+            <option>Slovakia</option>
+            <option>Czech Republic</option>
+            <option>Ukraine</option>
+            <option>Poland</option>
+            <option>Hungary</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Participant type</span>
+          <select class="reg-field__control" name="participantType" required>
+            <option>Student</option>
+            <option>Academic</option>
+            <option>Industry</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" required />
+        <span class="reg-check__text">
+          I agree with the
+          <a class="reg-link" href="#" target="_blank" rel="noreferrer"
+            >Terms &amp; Privacy policy</a
+          >
+          <span class="reg-req">*</span>
+        </span>
+      </label>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" />
+        <span class="reg-check__text"
+          >I would like to receive conference updates (optional)</span
+        >
+      </label>
+
+      <div class="reg-actions">
+        <button class="reg-actions__cancel" type="button" data-close-register>
+          Cancel
+        </button>
+        <button class="btn btn--primary reg-actions__submit" type="submit">
+          Complete registration
+        </button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="./index.html" aria-label="EDPE home">
+      <span class="brand__text">EDPE</span>
+    </a>
+
+    <span class="header__divider" aria-hidden="true"></span>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      <span class="sr-only">Open menu</span>
+      ☰
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <ul id="primary-nav" class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="./index.html">Home &amp; News</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-technical-tracks.html"
+            >Technical Tracks</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-organizers.html">Organizers</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-committees.html">Committees</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-program.html">Program</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./page-gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </nav>
+
+    <span
+      class="header__divider header__divider--right"
+      aria-hidden="true"
+    ></span>
+
+    <!-- Register opens modal -->
+    <a
+      class="btn btn--primary header__cta"
+      href="#register"
+      role="button"
+      data-open-register
+      aria-haspopup="dialog"
+      aria-controls="register-modal"
+    >
+      Register
+    </a>
+  </div>
+</header>
+
+
+    <main>
+      <section class="orgs" aria-labelledby="orgs-title">
+  <div class="container container--home">
+    <h1 class="orgs__title" id="orgs-title">Conference Organizers</h1>
+
+    <!-- 1) Organizers (6 logos) -->
+    <div class="orgs__card" aria-label="Conference organizers logos">
+      <div class="orgs__grid orgs__grid--3">
+        <a
+          class="orgs__tile"
+          href="https://fei.tuke.sk/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-20-p-2iA04n.png"
+            alt="TUKE FEI"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://www.vus.sk/ses/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/edpe/assets/image-21-DStWtljF.png" alt="SES" loading="lazy" />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://www.fer.unizg.hr/en#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/edpe/assets/image-22-oCeTUcyH.png" alt="FER" loading="lazy" />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://www.korema.hr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/edpe/assets/image-23-D4oGYaA6.png" alt="KOREMA" loading="lazy" />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://ieee.cz/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-24-BYnD5iyy.png"
+            alt="IEEE Czechoslovakia Section"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://ias.ieee.org/about/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-25-DsouToQE.png"
+            alt="IEEE IAS"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- 2) Partners (4 logos) -->
+    <h2 class="orgs__title">Conference Partners</h2>
+    <div class="orgs__card" aria-label="Conference partners logos">
+      <div class="orgs__grid orgs__grid--2 orgs__grid--partners">
+        <a
+          class="orgs__tile"
+          href="https://www.infineon.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-1-DWmWsrge.png"
+            alt="Infineon"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://www.infineon.com/promo/ipcei-on-me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-2-UYu6ze2U.png"
+            alt="IPCEI on Microelectronics"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://ieee-pemc2024.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-3-OLDDhYOK.png"
+            alt="PEMC"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile"
+          href="https://www.semikron-danfoss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-4-DsZV-Kqu.png"
+            alt="SEMIKRON DANFOSS"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- 3) Media partners (2 logos) -->
+    <h2 class="orgs__title">Media Partners</h2>
+    <div class="orgs__card" aria-label="Media partners logos">
+      <div class="orgs__media">
+        <a
+          class="orgs__tile orgs__tile--media-square"
+          href="http://www.ped.pwr.edu.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-26-BRT5jaLM.png"
+            alt="PWr PED"
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          class="orgs__tile orgs__tile--media-wide"
+          href="https://www.atpjournal.sk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/edpe/assets/image-27-D7K6jM2v.png"
+            alt="ATP Journal"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+  <div class="container container--home">
+    <div class="site-footer__grid">
+      <!-- Left: brand + socials -->
+      <div class="site-footer__left">
+        <div class="site-footer__brand">EDPE</div>
+
+        <nav class="site-footer__social" aria-label="Social links">
+          <a class="site-footer__icon" href="#" aria-label="Facebook">
+            <img src="../img/facebook.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="LinkedIn">
+            <img src="../img/linkedin.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="YouTube">
+            <img src="../img/youtube.svg" alt="" loading="lazy" />
+          </a>
+
+          <a class="site-footer__icon" href="#" aria-label="Instagram">
+            <img src="../img/instagram.svg" alt="" loading="lazy" />
+          </a>
+        </nav>
+      </div>
+
+      <!-- Center: Gallery title -->
+      <div class="site-footer__center">
+        <h2 class="site-footer__title" id="footer-gallery-title">Gallery</h2>
+      </div>
+
+      <div class="site-footer__right" aria-labelledby="footer-gallery-title">
+        <div class="site-footer__thumbs">
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 1"
+          >
+            <img
+              src="../img/footer-gallery/gallery-1.png"
+              alt="Gallery photo 1"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 2"
+          >
+            <img
+              src="../img/footer-gallery/gallery-2.png"
+              alt="Gallery photo 2"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 3"
+          >
+            <img
+              src="../img/footer-gallery/gallery-3.png"
+              alt="Gallery photo 3"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 4"
+          >
+            <img
+              src="../img/footer-gallery/gallery-4.png"
+              alt="Gallery photo 4"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 5"
+          >
+            <img
+              src="../img/footer-gallery/gallery-5.png"
+              alt="Gallery photo 5"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="site-footer__thumb"
+            href="#"
+            aria-label="Open gallery photo 6"
+          >
+            <img
+              src="../img/footer-gallery/gallery-6.png"
+              alt="Gallery photo 6"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
