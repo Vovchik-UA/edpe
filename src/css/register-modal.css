@@ -1,0 +1,149 @@
+html.is-modal-open {
+    overflow: hidden;
+}
+
+.reg-modal {
+    border: 1px solid rgba(138, 123, 255, 0.75);
+    border-radius: 44px;
+    padding: 0;
+    width: min(92vw, 560px);
+    background: radial-gradient(circle at 30% 10%, rgba(60, 45, 220, 0.25), transparent 55%),
+        rgba(0, 0, 0, 0.80);
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.reg-modal::backdrop {
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(6px);
+}
+
+.reg-modal__inner {
+    padding: 28px 28px 24px;
+    position: relative;
+    font-family: var(--font-family);
+}
+
+.reg-modal__close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 123, 255, 0.45);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+}
+
+.reg-modal__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: -0.02em;
+}
+
+.reg-modal__lead {
+    margin: 0 0 18px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.reg-form {
+    display: grid;
+    gap: 16px;
+}
+
+.reg-form__row {
+    display: grid;
+    gap: 16px;
+}
+
+.reg-form__row--2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.reg-field {
+    display: grid;
+    gap: 8px;
+}
+
+.reg-field__label {
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+.reg-field__control {
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid rgba(120, 100, 255, 0.45);
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    padding: 0 14px;
+    outline: none;
+}
+
+.reg-field__control:focus {
+    border-color: rgba(138, 123, 255, 0.85);
+    box-shadow: 0 0 0 3px rgba(138, 123, 255, 0.15);
+}
+
+.reg-check {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.reg-check__box {
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    accent-color: #6f5bff;
+}
+
+.reg-link {
+    color: #8a7bff;
+    text-decoration: none;
+}
+
+.reg-link:hover {
+    text-decoration: underline;
+}
+
+.reg-req {
+    color: #ff4d4d;
+}
+
+.reg-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.reg-actions__cancel {
+    background: transparent;
+    border: none;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.reg-actions__cancel:hover {
+    opacity: 1;
+}
+
+@media (max-width: 520px) {
+    .reg-form__row--2 {
+        grid-template-columns: 1fr;
+    }
+
+    .reg-modal__title {
+        font-size: 32px;
+    }
+}

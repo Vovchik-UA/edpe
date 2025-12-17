@@ -1,19 +1,70 @@
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --color-acent: #350ff3;
+  --base: #14171d;
+  --black-90: rgba(0, 0, 0, 0.9);
+  --blue-acent-70: rgba(53, 15, 243, 0.7);
+  --color: var(--blue-acent-70);
+  --color-acent-2: #5736ff;
+  --color-3: #090d17;
+  
+
+  --font-family: "Inter", sans-serif;
+  --second-family: "Holtwood One SC", sans-serif;
+
+  --white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --divider: rgba(255, 255, 255, 0.25);
+  --radius-10: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* remove weird divider under titles */
+.home-news__title::before,
+.home-news__title::after,
+.home-cfp__title::before,
+.home-cfp__title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.home-news__header hr,
+.home-cfp__header hr {
+  display: none !important;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 52px;
+  min-width: 112px;
+  padding: 14px 24px;
+
+  border-radius: 8px;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  text-decoration: none;
 }
 
 body {
@@ -22,6 +73,9 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  
+  font-family: var(--font-family);
+  background: var(--base);
 }
 
 main {
@@ -29,4 +83,48 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #fff;
+  color: #000;
+  padding: 8px 10px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container.container--home {
+  max-width: 1280px;
+}
+
+@media (min-width: 1200px) {
+  .container.container--home {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.home-news__card,
+.home-cfp__card {
+  width: 100%;
 }

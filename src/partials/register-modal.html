@@ -1,0 +1,116 @@
+<dialog class="reg-modal" id="register-modal" aria-labelledby="reg-title">
+  <div class="reg-modal__inner">
+    <button
+      class="reg-modal__close"
+      type="button"
+      data-close-register
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <h2 class="reg-modal__title" id="reg-title">Register for EDPE 2025</h2>
+    <p class="reg-modal__lead">
+      Please fill in your details to complete the registration.
+    </p>
+
+    <form class="reg-form" action="#" method="post">
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">First name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="firstName"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Last name</span>
+          <input
+            class="reg-field__control"
+            type="text"
+            name="lastName"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+      </div>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Email</span>
+        <input
+          class="reg-field__control"
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+      </label>
+
+      <label class="reg-field">
+        <span class="reg-field__label">Affiliation / Institution</span>
+        <input
+          class="reg-field__control"
+          type="text"
+          name="affiliation"
+          autocomplete="organization"
+        />
+      </label>
+
+      <div class="reg-form__row reg-form__row--2">
+        <label class="reg-field">
+          <span class="reg-field__label">Country</span>
+          <select class="reg-field__control" name="country" required>
+            <option value="" selected disabled>Country</option>
+            <option>Slovakia</option>
+            <option>Czech Republic</option>
+            <option>Ukraine</option>
+            <option>Poland</option>
+            <option>Hungary</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label class="reg-field">
+          <span class="reg-field__label">Participant type</span>
+          <select class="reg-field__control" name="participantType" required>
+            <option>Student</option>
+            <option>Academic</option>
+            <option>Industry</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" required />
+        <span class="reg-check__text">
+          I agree with the
+          <a class="reg-link" href="#" target="_blank" rel="noreferrer"
+            >Terms &amp; Privacy policy</a
+          >
+          <span class="reg-req">*</span>
+        </span>
+      </label>
+
+      <label class="reg-check">
+        <input class="reg-check__box" type="checkbox" />
+        <span class="reg-check__text"
+          >I would like to receive conference updates (optional)</span
+        >
+      </label>
+
+      <div class="reg-actions">
+        <button class="reg-actions__cancel" type="button" data-close-register>
+          Cancel
+        </button>
+        <button class="btn btn--primary reg-actions__submit" type="submit">
+          Complete registration
+        </button>
+      </div>
+    </form>
+  </div>
+</dialog>
