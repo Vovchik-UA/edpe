@@ -1,20 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/edpe/favicon.svg" />
+    <link rel="icon" href="/edpe/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/edpe/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/edpe/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/edpe/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/edpe/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/edpe/assets/modulepreload-polyfill-B5Qt9EMX.js">
-    <link rel="stylesheet" crossorigin href="/edpe/assets/index-CeQOm1AT.css">
-    <link rel="stylesheet" crossorigin href="/edpe/assets/styles-Bs2rRueC.css">
-    <link rel="stylesheet" crossorigin href="/edpe/assets/organizers-DEVWlpqO.css">
+    <title>EDPE</title>
+    <script type="module" crossorigin src="/edpe/assets/main-lBBN4wD0.js"></script>
+    <link rel="stylesheet" crossorigin href="/edpe/assets/main-BpUt1sdI.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="header">
   <div class="container header__inner">
@@ -66,7 +64,7 @@
 
     <!-- Register opens modal -->
     <a
-      class="btn btn--primary header__cta"
+      class="btn btn--primary"
       href="#register"
       role="button"
       data-open-register
@@ -194,6 +192,30 @@
     </form>
   </div>
 </dialog>
+<!-- Success toast -->
+<div
+  class="toast"
+  id="reg-toast"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  <span class="toast__icon" aria-hidden="true">i</span>
+
+  <div class="toast__body">
+    <div class="toast__title">Registration successful</div>
+    <div class="toast__text">Thank you for registering!</div>
+  </div>
+
+  <button
+    class="toast__close"
+    type="button"
+    data-toast-close
+    aria-label="Close"
+  >
+    ×
+  </button>
+</div>
 
 
     <main>
@@ -468,10 +490,12 @@
       <h2 id="cta-title" class="home-cta__title">Apply now!</h2>
 
       <a
-        class="home-cta__btn btn btn--primary btn--lg""
-        href="https://www.edpe.sk/registration/"
-        target="_blank"
-        rel="noopener noreferrer"
+        class="home-cta__btn btn btn--primary btn--lg"
+        href="#register"
+        role="button"
+        data-open-register
+        aria-haspopup="dialog"
+        aria-controls="register-modal"
       >
         Register
       </a>
@@ -488,23 +512,12 @@
       <div class="site-footer__left">
         <div class="site-footer__brand">EDPE</div>
 
-        <nav class="site-footer__social" aria-label="Social links">
-          <a class="site-footer__icon" href="#" aria-label="Facebook">
-            <img src="../img/facebook.svg" alt="" loading="lazy" />
-          </a>
-
-          <a class="site-footer__icon" href="#" aria-label="LinkedIn">
-            <img src="../img/linkedin.svg" alt="" loading="lazy" />
-          </a>
-
-          <a class="site-footer__icon" href="#" aria-label="YouTube">
-            <img src="../img/youtube.svg" alt="" loading="lazy" />
-          </a>
-
-          <a class="site-footer__icon" href="#" aria-label="Instagram">
-            <img src="../img/instagram.svg" alt="" loading="lazy" />
-          </a>
-        </nav>
+        <div class="site-footer__copyright" aria-label="Copyright">
+          <span class="site-footer__copy-symbol" aria-hidden="true">©</span>
+          <span class="site-footer__copy-text">
+            <span id="footer-year"></span> EDPE. All rights reserved.
+          </span>
+        </div>
       </div>
 
       <!-- Center: Gallery title -->
@@ -516,7 +529,7 @@
         <div class="site-footer__thumbs">
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 1"
           >
             <img
@@ -527,7 +540,7 @@
           </a>
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 2"
           >
             <img
@@ -538,7 +551,7 @@
           </a>
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 3"
           >
             <img
@@ -549,7 +562,7 @@
           </a>
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 4"
           >
             <img
@@ -560,7 +573,7 @@
           </a>
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 5"
           >
             <img
@@ -571,7 +584,7 @@
           </a>
           <a
             class="site-footer__thumb"
-            href="#"
+            href="./page-gallery.html"
             aria-label="Open gallery photo 6"
           >
             <img
