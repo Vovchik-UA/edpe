@@ -146,3 +146,19 @@
   }
   
 }
+
+/* default link color */
+.nav__link {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+
+/* active/current page link */
+.nav__link.is-active,
+.nav__link[aria-current="page"] {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  text-decoration-skip-ink: none;
+}

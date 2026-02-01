@@ -1,0 +1,230 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ===== Gallery page ===== */
+
+.gallery {
+    padding: 96px 0 120px;
+    color: #fff;
+}
+
+.gallery__title {
+    margin: 0 0 48px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+}
+
+.gallery__card {
+    width: 1280px;
+    max-width: calc(100vw - 64px);
+    margin: 0 auto;
+
+    padding: 32px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 45px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+/*
+  Figma grid:
+  - 2 columns
+  - cell size: 576 x 384
+  - gap: 24
+*/
+.gallery__grid {
+    display: grid;
+    gap: 24px;
+
+    grid-template-columns: repeat(2, 576px);
+    grid-auto-rows: 384px;
+
+    justify-content: center;
+}
+
+.gallery__item {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+.gallery__grid img {
+    border-radius: 24px;
+}
+
+/* Image inside tile */
+.gallery__img,
+.gallery__item img,
+.gallery__grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: scale(1);
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.gallery__item:hover .gallery__img,
+.gallery__item:hover img,
+.gallery__grid img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+/* ===== Lightbox ===== */
+
+/* ===== Lightbox (override) ===== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox__dialog {
+    position: relative;
+
+    width: min(1100px, calc(100vw - 48px));
+    max-height: calc(100vh - 48px);
+}
+
+.lightbox__img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 96px);
+
+    object-fit: contain;
+
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 30px 120px rgba(0, 0, 0, 0.65);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55);
+}
+
+.lightbox__close:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 680px) {
+    .lightbox {
+        padding: 16px;
+    }
+
+    .lightbox__dialog {
+        width: calc(100vw - 32px);
+        max-height: calc(100vh - 32px);
+    }
+
+    .lightbox__img {
+        max-height: calc(100vh - 72px);
+        border-radius: 18px;
+    }
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 1280px) {
+    .gallery__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+    }
+
+    /* keep ratio like 576x384 = 3:2 */
+    .gallery__item {
+        aspect-ratio: 3 / 2;
+    }
+
+    .gallery__grid img {
+        aspect-ratio: 3 / 2;
+    }
+
+    .gallery__item img,
+    .gallery__img,
+    .gallery__grid img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 680px) {
+    .gallery {
+        padding: 72px 0 96px;
+    }
+
+    .gallery__title {
+        font-size: 40px;
+        margin-bottom: 36px;
+    }
+
+    .gallery__card {
+        max-width: calc(100vw - 32px);
+        padding: 24px;
+        border-radius: 32px;
+    }
+
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery__item,
+    .gallery__grid img {
+        border-radius: 18px;
+    }
+}
